@@ -1,0 +1,11 @@
+1 Not
+3 Sit
+4 White
+7 Over
+8 Made
+12 Away
+10 Any
+13 But
+14 Nay
+
+
