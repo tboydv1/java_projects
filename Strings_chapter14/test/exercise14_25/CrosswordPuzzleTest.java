@@ -124,6 +124,17 @@ class CrosswordPuzzleTest {
 		assertEquals(8, myBoard.getBoard().length);
 	}
 	
+	@Test
+	void sortWordListTest() {
+		
+		puzzleClass.sortWords();
+		
+		assertEquals("soup", puzzleClass.getWordList().get(0));
+		assertEquals("pale", puzzleClass.getWordList().get(1));
+		assertEquals("lagos", puzzleClass.getWordList().get(2));
+		assertEquals("crabs", puzzleClass.getWordList().get(3));
+	}
+	
 	
 
 }
