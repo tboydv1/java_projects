@@ -55,8 +55,26 @@ class HugeIntegerTest {
 	}
 	
 	@Test
-	void methodToStringTest9() {
+	void methodToStringTest() {
 		
+		
+		
+	}
+	
+	@Test
+	void methodAddTest() {
+		
+		intObj.parse("954");
+		
+		HugeInteger intObj2 = new HugeInteger();
+		
+		intObj2.parse("236");
+		
+		intObj.add(intObj2);
+		
+		
+		
+//		assertEquals();
 	}
 	
 	

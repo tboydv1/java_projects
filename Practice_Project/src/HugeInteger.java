@@ -48,6 +48,29 @@ public class HugeInteger {
 		}
 	}
 	
+	@Override
+	public String toString() {
+		
+		String elements = "";
+		
+		for(int i = 0; i < getIntArray().length; i++) {
+			
+			elements.concat(String.valueOf(getIntArray()[i]));
+		}
+		
+		return elements;
+	}
+	
+	
+	public HugeInteger add(HugeInteger obj) {
+		
+		
+		return obj;
+		
+		
+		
+	}
+	
 	
 
 	
