@@ -1,0 +1,32 @@
+package excercise4_37;
+
+import java.util.Scanner;
+
+public class FactorialConstant {
+	public double   findConstant(int terms) {
+		int counter = 1;
+		int temp = 1;
+		double constant = 1;
+		
+		while (counter <= terms)
+		{
+			temp = counter * temp;
+//			constant = (1 / temp) + constant;
+			counter++;
+		}
+		return temp;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		FactorialConstant nest = new FactorialConstant();
+		
+		System.out.println("Enter number: ");
+		int number = input.nextInt();
+		
+		System.out.println(nest.findConstant(number));
+	}
+
+}

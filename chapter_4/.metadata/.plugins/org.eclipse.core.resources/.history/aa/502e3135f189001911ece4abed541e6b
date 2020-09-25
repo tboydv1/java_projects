@@ -1,0 +1,48 @@
+package excercise4_37;
+
+public class Nth_Root {
+	
+	public int findNthRoot(int x, int y)
+	{
+		//divide y by 2 and set to i
+		int i = y / 2; 
+		int counter = 1, mod;
+		int store = 1;
+		
+		while(counter <= i)
+		{
+			mod = y % counter;
+			
+			if(mod == 0)
+			{
+				System.out.println(counter);
+				//find the power of counter when mod equal to 0
+				int pow = 1;
+				while(pow < x)
+				{
+					store = counter * store;
+					pow++;
+					return store;
+				}
+//				if (store == y)
+//				{
+//					return store;
+//				}
+//				
+			}
+			counter++;
+			
+		}
+		return y;
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Nth_Root figure = new Nth_Root();
+		
+		System.out.print(figure.findNthRoot(4, 16));
+
+	}
+
+}

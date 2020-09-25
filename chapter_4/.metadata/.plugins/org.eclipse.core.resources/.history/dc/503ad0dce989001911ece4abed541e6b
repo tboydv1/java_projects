@@ -1,0 +1,55 @@
+package excercise4_37;
+
+import java.util.Scanner;
+
+public class FactorialConstant {
+	public double findConstant(int terms) {
+		int counter = 1;
+		long temp = 1;
+		double constant = 1;
+		
+		while (counter <= terms)
+		{
+			temp = counter * temp;
+			constant = (double) (1/ temp) + constant;
+			counter++;
+		}
+		return temp;
+	}
+	public double findConstantPower(int terms) {
+		int counter = 1;
+		int fact = 1;
+		int constant = 0;
+		while(counter <= terms)
+		{
+			fact = counter * fact; //factorial
+			
+			int exp = 1; // to calculate power for the number of terms
+			int eq = terms; //number to find power
+			int store = 1; // to store result
+			
+//			while (exp <= terms)
+//			{
+				store = eq * store;
+				constant = store / fact + constant;
+				
+//				exp++;
+//			}
+			counter++;
+		}
+		return constant;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		FactorialConstant nest = new FactorialConstant();
+		
+		System.out.println("Enter number: ");
+		int number = input.nextInt();
+		
+		System.out.println(nest.findConstantPower(number));
+	}
+
+}

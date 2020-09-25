@@ -1,0 +1,14 @@
+find the nth root of a number
+receive input x as the nth root of y 
+
+divide y by 2 to check range of half the values of y 
+set y/2 to i
+set a counter for i number of times 
+perform y modulus for the range of numbers half of y
+set to new variable m
+if m is equals zero 
+find the power of the value that divides y without a remainder
+if the result of the value raised to the power for x number of time is equal to zero 
+return value;
+
+  

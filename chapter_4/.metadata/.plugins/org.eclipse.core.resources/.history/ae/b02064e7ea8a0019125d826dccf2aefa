@@ -1,0 +1,10 @@
+package exercise_439;
+
+public class WorldPopulation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,40 @@
+package exercise_438;
+
+public class Cryptography {
+
+	public String encryptNumber(int digits)
+	{	
+		int order = 0;
+		int place = 1;
+		String store = "";
+		int value1 =0, value2=0, value3 =0, value4 =0;
+		while (digits > 0) {
+			
+		int remainder = digits % 10;
+		int newValue = (remainder + 7) % 10;
+		order = newValue * place + order;
+		System.out.println(newValue + "===" + order);
+			if(place < 10)
+				value1 = newValue;
+			else if (place < 100)
+				value2 = newValue;
+			else if(place < 1000)
+				value3 = newValue;
+			else value4 = newValue;
+			
+		digits = digits / 10;
+		
+		place *= 10;
+		}
+		store = value3 + "" + value4 + "" + value1 + "" + value2;
+		return store;
+		
+		
+	}
+	public static void main(String[] args)
+	{
+		Cryptography message = new Cryptography();
+		
+		System.out.println(message.encryptNumber(1234));
+	}
+}

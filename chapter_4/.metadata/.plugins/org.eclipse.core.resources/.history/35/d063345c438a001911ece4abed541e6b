@@ -1,0 +1,33 @@
+package exercise_438;
+
+public class Cryptography {
+
+	public int encryptNumber(int digits)
+	{	
+		int order = 0;
+		int place = 1;
+		String store = " ";
+		int value1 = 0;
+		
+		while (digits > 0) {
+			
+		int remainder = digits % 10;
+		int newValue = (remainder + 7) % 10;
+		order = newValue * place + order;
+		store =value1+ "" + newValue;
+		System.out.println(store);
+		digits = digits / 10;
+		
+		place *= 10;
+		}
+		return order;
+		
+		
+	}
+	public static void main(String[] args)
+	{
+		Cryptography message = new Cryptography();
+		
+		System.out.println(message.encryptNumber(1234));
+	}
+}
